@@ -3,7 +3,7 @@ const { Telegraf } = require('telegraf')
 const fetch = require('node-fetch');
 const bot = new Telegraf(process.env.BOT_TOKEN||8080)
 bot.start((ctx) => {ctx.reply(`Привет ${ctx.message.from.first_name}`)
-console.log(ctx.message)})
+console.log(ctx.message)}) 
 bot.help((ctx) => ctx.reply('Напиши /bot'))
 bot.hears('/bot', async (ctx) => {
     async function request2(){
@@ -60,7 +60,7 @@ if((arr[0]==="red" && (arr[1]==="white" ||arr[1]==="grey") && arr[2]==="red"  &&
     }
     function good(){
         ctx.reply('Бот запущен!')
-       global.time= setInterval(request2,60000) 
+       global.time= setInterval(request2,30000) 
        }
 
 
